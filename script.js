@@ -1,32 +1,31 @@
 const inputField = document.getElementById('input-field');
-const buttons = document.querySelectorAll('button');
+const buttons = document.querySelectorAll('.btn');
 const outputField = document.getElementById('output-field');
 
-buttons.forEach(button => {
+const btn = Array.from(buttons);
     
-button.addEventListener('onclick', () => {
+btn[0].addEventListener('click', () => {
     toUpperCase();
 });
 
-button.addEventListener('onclick', () => {
+btn[1].addEventListener('click', () => {
     toLowerCase();
 });
 
-button.addEventListener('onclick', () => {
+btn[2].addEventListener('click', () => {
     capitalize();
 });
 
-button.addEventListener('onclick', () => {
+btn[3].addEventListener('click', () => {
     boldtext();
 });
 
-button.addEventListener('onclick', () => {
+btn[4].addEventListener('click', () => {
     italictext();
 });
 
-button.addEventListener('onclick', () => {
+btn[5].addEventListener('click', () => {
     underlinetext();
-});
 });
 
 function toUpperCase() {
@@ -48,19 +47,19 @@ function capitalize() {
 }
  function boldtext() {
     const inputtext = inputField.value;
-    inputtext.style.fontWeight = 'bold';
-    outputField.innerText = 'inputtext';
+    outputField.innerText = inputtext;
+    outputField.style.fontWeight = 'bold';
     
  }
 
  function italictext() {
     const inputtext = inputField.value;
-   inputtext.style.fontStyle = 'italic';
-    outputField.innerText = 'inpiuttext';
+    outputField.innerText = inputtext;
+    outputField.style.fontStyle = 'italic';
  }
 
  function underlinetext() {
     const inputtext = inputField.value;
-   inputtext.style.textDecoration = 'underline';
-    outputField.innerText = 'inputtext';
+    outputField.innerText = inputtext;
+    outputField.style.textDecoration = 'underline';
  }
